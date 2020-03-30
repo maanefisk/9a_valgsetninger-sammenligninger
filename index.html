@@ -28,13 +28,17 @@
         var bb = document.getElementById('biggest');
         var test = document.getElementById('testtag');
 
+        
+
         function choose(chosen) {
-        (chosen.classList.toggle("selected")); 
-        if (true) {
-            test.innerHTML = ('YE');
-            console.log;
-            }
+
+        let a = chosen.classList.toggle('selected');   
+
+        (chosen.classList.toggle("selected", true)); 
+        console.log(a);
         }
+
+    
 
 
         function calculate() {
