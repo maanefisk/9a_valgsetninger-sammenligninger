@@ -1,0 +1,68 @@
+﻿﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Battle of the biggest</title>
+    <link rel="stylesheet" href="stylesheet.css"/>
+</head>
+<body>
+    
+    
+    <input id="width" type="range" min="0" max="50" step="1" oninput="calculate()"/>
+    <input id="height" type="range" min="0" max="50" step="1" oninput="calculate()"/>
+    <div>Click A or B</div>
+
+    <div id="A" onclick="choose(this)">A</div>
+    <div id="B" onclick="choose(this)">B</div>
+    <div id="areal">Areal</div>
+    <div id="biggest">Hvem er størst</div>
+    <div id="testtag">Testtag</div>
+
+    <script>
+        var w = document.getElementById('width');
+        var h = document.getElementById('height');
+        var sumareal = document.getElementById('areal');
+        var indreA = document.getElementById('A');
+        var indreB = document.getElementById('B');
+        var bb = document.getElementById('biggest');
+        var test = document.getElementById('testtag');
+
+        function choose(chosen) {
+        (chosen.classList.toggle("selected")); 
+        if (true) {
+            test.innerHTML = ('YE');
+            console.log;
+            }
+        }
+
+
+        function calculate() {
+            var wcalc = parseInt(w.value);
+            var hcalc = parseInt(h.value);
+            var arealet = wcalc * hcalc;
+
+            sumareal.innerHTML = arealet;
+            indreA.innerHTML = wcalc;
+            indreB.innerHTML = hcalc;
+
+            if (wcalc>hcalc) {
+                bb.innerHTML = ('Width is larger');
+            }
+
+            else {
+                bb.innerHTML = ('Height is larger');
+            }
+
+            
+            
+
+
+        }
+ 
+
+
+
+    </script>
+</body>
+</html>
